@@ -8,7 +8,7 @@ import (
 func fetchBufferOverrun(domain string) ([]string, error) {
 	out := make([]string, 0)
 
-	fetchURL := fmt.Sprintf("https://dns.bufferover.run/dns?q=.%s", domain)
+	fetchURL := fmt.Sprintf("https://dns.bufferover.run/dns?q=.example.com' -H 'x-api-key: ZNkO5gVOXF7xoS172k83O8hIKoDnWGou9FhcV2OQ'.%s", domain)
 
 	wrapper := struct {
 		Records []string `json:"FDNS_A"`
